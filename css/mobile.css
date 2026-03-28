@@ -1,78 +1,53 @@
-@media (max-width: 960px) {
-  .hero-grid,
-  .booking-box,
-  .benefits-grid,
-  .tours-grid,
-  .why-grid,
-  .final-cta-box,
-  .footer-inner {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-  }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 76px;
-    left: 16px;
-    right: 16px;
-    background: #fff;
-    border: 1px solid #e7ebf3;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .section-head h2 {
-    font-size: 28px;
-  }
-
-  .hero-content,
-  .hero-card-inner,
-  .booking-box,
-  .final-cta-box {
-    padding: 24px;
-  }
+/* ===== Tablet (max-width: 900px) ===== */
+@media (max-width:900px) {
+  .trust-grid { grid-template-columns:repeat(2,1fr); }
+  .details-grid { grid-template-columns:1fr; }
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .tours-grid { grid-template-columns:1fr; }
+  .steps-grid { grid-template-columns:1fr; gap:24px; }
+  .form-grid { grid-template-columns:1fr; gap:32px; }
+  .hero h1 { font-size:32px; }
+  .why-grid { grid-template-columns:repeat(2,1fr); }
 }
 
-@media (max-width: 640px) {
-  .container {
-    width: min(100% - 24px, 1180px);
+/* ===== Mobile (max-width: 640px) ===== */
+@media (max-width:640px) {
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    background:#fff;
+    flex-direction:column;
+    padding:20px 24px;
+    gap:16px;
+    border-bottom:1px solid #e8eaed;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
   }
-
-  .hero {
-    padding-top: 40px;
-  }
-
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .hero-text {
-    font-size: 16px;
-  }
-
-  .hero-actions,
-  .section-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
+  .nav-links.open { display:flex; }
+  .menu-toggle { display:block; }
+  .hero { min-height:440px; }
+  .hero--compact { min-height:260px; }
+  .hero h1 { font-size:28px; }
+  .hero-subtitle { font-size:15px; }
+  .hero-content { padding:40px 0 36px; }
+  .section { padding:48px 0; }
+  .section-title { font-size:24px; }
+  .trust-grid { grid-template-columns:1fr; gap:12px; }
+  .trust-card { text-align:left; display:flex; align-items:center; gap:16px; padding:20px; }
+  .trust-icon { margin:0; flex-shrink:0; }
+  .includes-grid { grid-template-columns:1fr; }
+  .gallery-grid { grid-template-columns:1fr; }
+  .gallery-card img { height:200px; }
+  .cta-section h2 { font-size:24px; }
+  .btn-wa { padding:14px 28px; font-size:15px; width:100%; justify-content:center; }
+  .footer-inner { flex-direction:column; text-align:center; }
+  .footer-contacts { flex-direction:column; gap:10px; }
+  .details-text { padding:28px 20px; }
+  .details-sidebar { padding:28px 20px; }
+  .form-section { padding:48px 0; }
+  .why-grid { grid-template-columns:1fr; gap:12px; }
+  .why-card { text-align:left; display:flex; align-items:center; gap:16px; padding:20px; }
+  .why-icon { margin:0; flex-shrink:0; }
 }
