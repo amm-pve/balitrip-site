@@ -1,231 +1,189 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Экскурсии на Бали — индивидуальные и групповые туры | Balitrip</title>
-  <meta name="description" content="Современные экскурсии на Бали: вулканы, водопады, храмы, Нуса-Пенида и авторские маршруты. Удобное бронирование напрямую через WhatsApp." />
-  <meta name="keywords" content="экскурсии на Бали, туры Бали, гид на Бали, Нуса Пенида, вулкан Батур, водопады Бали" />
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/mobile.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo">BaliTrip</a>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; color:#2d3436; background:#f5f6f8; line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased; }
+img { max-width:100%; height:auto; display:block; }
+a { color:inherit; text-decoration:none; }
+.container { max-width:1100px; margin:0 auto; padding:0 24px; }
 
-      <nav class="main-nav" id="mainNav">
-        <a href="#tours">Экскурсии</a>
-        <a href="#why-us">Почему мы</a>
-        <a href="#booking">Бронирование</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+/* ===== Header ===== */
+.site-header { background:#fff; border-bottom:1px solid #e8eaed; position:sticky; top:0; z-index:100; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; height:60px; }
+.logo { font-size:18px; font-weight:700; color:#2d3436; letter-spacing:-0.3px; }
+.logo span { color:#636e72; font-weight:400; }
+.nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
+.nav-links a { font-size:14px; color:#636e72; transition:color .2s; white-space:nowrap; }
+.nav-links a:hover { color:#2d3436; }
+.nav-links .nav-wa { color:#25d366; font-weight:600; }
+.nav-links .nav-wa:hover { color:#1da851; }
+.nav-links .active { color:#2d3436; font-weight:600; }
+.menu-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; }
+.menu-toggle span { display:block; width:22px; height:2px; background:#2d3436; margin:5px 0; transition:.3s; }
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
-        ☰
-      </button>
-    </div>
-  </header>
+/* ===== Hero ===== */
+.hero { position:relative; overflow:hidden; background:#1a1a2e; min-height:520px; display:flex; align-items:flex-end; }
+.hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.7; }
+.hero-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.18) 60%,rgba(0,0,0,.10) 100%); }
+.hero-content { position:relative; z-index:2; padding:60px 0 48px; color:#fff; max-width:680px; }
+.hero h1 { font-size:42px; font-weight:800; line-height:1.15; letter-spacing:-.5px; margin-bottom:16px; }
+.hero-subtitle { font-size:17px; line-height:1.6; color:rgba(255,255,255,.88); margin-bottom:28px; max-width:560px; }
+.hero-chips { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px; }
+.hero-chip { background:rgba(255,255,255,.15); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.22); padding:8px 18px; border-radius:50px; font-size:14px; color:#fff; font-weight:500; }
+.hero--compact { min-height:320px; }
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="hero-badge">Экскурсии на Бали напрямую без посредников</p>
-          <h1>Современные экскурсии на Бали с удобным бронированием в WhatsApp</h1>
-          <p class="hero-text">
-            Индивидуальные и групповые туры по самым красивым местам Бали:
-            вулканы, водопады, рисовые террасы, храмы, пляжи и Нуса-Пенида.
-          </p>
+/* ===== WhatsApp Button ===== */
+.btn-wa { display:inline-flex; align-items:center; gap:10px; background:#25d366; color:#fff; font-size:16px; font-weight:700; padding:16px 36px; border-radius:50px; transition:background .2s,transform .15s,box-shadow .2s; box-shadow:0 4px 20px rgba(37,211,102,.35); cursor:pointer; border:none; text-decoration:none; }
+.btn-wa:hover { background:#1ebe5d; transform:translateY(-2px); box-shadow:0 6px 28px rgba(37,211,102,.45); }
+.btn-wa:active { transform:translateY(0); }
+.btn-wa svg { width:22px; height:22px; fill:#fff; flex-shrink:0; }
+.btn-hint { display:block; margin-top:10px; font-size:13px; color:rgba(255,255,255,.55); }
+.btn-hint--dark { color:#98a4ae; }
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#tours">Смотреть экскурсии</a>
-            <a class="btn btn-secondary" href="https://wa.me/" target="_blank" rel="noopener">
-              Написать в WhatsApp
-            </a>
-          </div>
+/* ===== Section Common ===== */
+.section { padding:72px 0; }
+.section-title { font-size:28px; font-weight:700; margin-bottom:12px; letter-spacing:-.3px; color:#2d3436; }
+.section-subtitle { font-size:16px; color:#636e72; margin-bottom:40px; max-width:560px; }
+.section-title--center { text-align:center; }
+.section-subtitle--center { text-align:center; margin-left:auto; margin-right:auto; }
 
-          <ul class="hero-points">
-            <li>Прямой контакт с организатором</li>
-            <li>Понятные маршруты и цены</li>
-            <li>Быстрое подтверждение</li>
-          </ul>
-        </div>
+/* ===== Trust / Advantages ===== */
+.trust { background:#fff; }
+.trust-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.trust-card { background:#f5f6f8; border-radius:14px; padding:28px 24px; text-align:center; transition:box-shadow .2s; }
+.trust-card:hover { box-shadow:0 4px 20px rgba(0,0,0,.06); }
+.trust-icon { width:48px; height:48px; margin:0 auto 16px; background:#e8f5e9; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:22px; }
+.trust-card h3 { font-size:15px; font-weight:700; margin-bottom:6px; color:#2d3436; }
+.trust-card p { font-size:13px; color:#636e72; line-height:1.5; }
 
-        <div class="hero-card">
-          <div class="hero-card-inner">
-            <h2>Быстрый подбор экскурсии</h2>
-            <p>Подберём маршрут под семью, пару, компанию друзей или индивидуальный формат отдыха.</p>
-            <a class="btn btn-primary btn-full" href="https://wa.me/" target="_blank" rel="noopener">
-              Подобрать маршрут
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ===== Tour Details (Two-column) ===== */
+.details { background:#f5f6f8; }
+.details-grid { display:grid; grid-template-columns:1fr 380px; gap:32px; align-items:start; }
+.details-text { background:#fff; border-radius:16px; padding:36px 32px; box-shadow:0 2px 12px rgba(0,0,0,.04); }
+.details-text h2 { font-size:22px; font-weight:700; margin-bottom:20px; color:#2d3436; }
+.details-text p { margin-bottom:14px; color:#4a5568; font-size:15px; line-height:1.75; }
+.details-text p:last-child { margin-bottom:0; }
+.details-sidebar { background:#fff; border-radius:16px; padding:32px 28px; box-shadow:0 2px 12px rgba(0,0,0,.04); position:sticky; top:80px; }
+.details-sidebar h3 { font-size:18px; font-weight:700; margin-bottom:24px; color:#2d3436; }
+.sidebar-item { display:flex; justify-content:space-between; align-items:baseline; padding:12px 0; border-bottom:1px solid #f0f1f3; font-size:14px; }
+.sidebar-item:last-child { border-bottom:none; }
+.sidebar-label { color:#636e72; }
+.sidebar-value { font-weight:600; color:#2d3436; text-align:right; }
+.price-table { width:100%; margin-top:20px; border-collapse:collapse; }
+.price-table-title { font-size:16px; font-weight:700; margin-bottom:12px; margin-top:8px; color:#2d3436; }
+.price-table td { padding:8px 0; font-size:14px; border-bottom:1px solid #f0f1f3; }
+.price-table td:first-child { color:#636e72; }
+.price-table td:last-child { text-align:right; font-weight:600; color:#2d3436; }
+.price-table tr:last-child td { border-bottom:none; }
 
-    <section class="benefits">
-      <div class="container benefits-grid">
-        <article class="benefit-card">
-          <h3>Без лишних посредников</h3>
-          <p>Общение напрямую с организатором, без долгих цепочек согласований.</p>
-        </article>
+/* ===== Included / Not Included ===== */
+.includes { background:#fff; }
+.includes-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.includes-card { background:#f5f6f8; border-radius:14px; padding:32px 28px; }
+.includes-card h3 { font-size:18px; font-weight:700; margin-bottom:20px; color:#2d3436; }
+.includes-card.included h3 { color:#1ebe5d; }
+.includes-card.not-included h3 { color:#e17055; }
+.includes-list { list-style:none; }
+.includes-list li { padding:8px 0; font-size:15px; color:#4a5568; display:flex; align-items:center; gap:10px; }
+.includes-list li::before { content:''; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+.included .includes-list li::before { background:#25d366; }
+.not-included .includes-list li::before { background:#e17055; }
 
-        <article class="benefit-card">
-          <h3>Гибкие маршруты</h3>
-          <p>Можно выбрать готовый тур или адаптировать маршрут под себя.</p>
-        </article>
+/* ===== CTA Section ===== */
+.cta-section { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%); text-align:center; padding:72px 0; }
+.cta-section h2 { font-size:30px; font-weight:800; color:#fff; margin-bottom:14px; letter-spacing:-.3px; }
+.cta-section p { font-size:16px; color:rgba(255,255,255,.7); margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto; }
+.cta-section .btn-hint { color:rgba(255,255,255,.4); }
 
-        <article class="benefit-card">
-          <h3>Быстрая связь</h3>
-          <p>Все ключевые вопросы удобно решаются в WhatsApp.</p>
-        </article>
-      </div>
-    </section>
+/* ===== Gallery ===== */
+.gallery { background:#f5f6f8; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.gallery-card { border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.04); transition:box-shadow .2s,transform .2s; }
+.gallery-card:hover { box-shadow:0 8px 30px rgba(0,0,0,.10); transform:translateY(-3px); }
+.gallery-card img { width:100%; height:240px; object-fit:cover; }
+.gallery-card figcaption { padding:14px 16px; font-size:13px; color:#636e72; text-align:center; }
 
-    <section class="tours-section" id="tours">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Популярные направления</p>
-          <h2>Экскурсии, которые выбирают чаще всего</h2>
-          <p>
-            Ниже — примеры популярных маршрутов. Дальше мы подставим все реальные туры
-            и сохраним SEO-страницы старого сайта.
-          </p>
-        </div>
+/* ===== Tour Cards Grid ===== */
+.tours-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+.tour-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.04); transition:box-shadow .25s,transform .25s; display:flex; flex-direction:column; }
+.tour-card:hover { box-shadow:0 12px 40px rgba(0,0,0,.10); transform:translateY(-4px); }
+.tour-card-img { position:relative; overflow:hidden; height:220px; }
+.tour-card-img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.tour-card:hover .tour-card-img img { transform:scale(1.06); }
+.tour-card-badge { position:absolute; top:14px; left:14px; background:rgba(37,211,102,.9); color:#fff; font-size:12px; font-weight:700; padding:5px 14px; border-radius:50px; backdrop-filter:blur(4px); }
+.tour-card-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+.tour-card-body h3 { font-size:18px; font-weight:700; margin-bottom:8px; color:#2d3436; }
+.tour-card-body .tour-card-desc { font-size:14px; color:#636e72; line-height:1.6; margin-bottom:16px; flex:1; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.tour-card-meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.tour-card-chip { background:#f5f6f8; padding:5px 12px; border-radius:50px; font-size:12px; color:#636e72; font-weight:500; }
+.tour-card-footer { display:flex; align-items:center; justify-content:space-between; }
+.tour-card-price { font-size:20px; font-weight:800; color:#2d3436; }
+.tour-card-price small { font-size:13px; font-weight:400; color:#636e72; }
+.tour-card-link { display:inline-flex; align-items:center; gap:6px; background:#2d3436; color:#fff; font-size:13px; font-weight:600; padding:10px 20px; border-radius:50px; transition:background .2s; }
+.tour-card-link:hover { background:#1a1a2e; }
 
-        <div class="tours-grid">
-          <article class="tour-card">
-            <div class="tour-card-body">
-              <p class="tour-tag">Рассвет / природа</p>
-              <h3>Вулкан Батур</h3>
-              <p>Рассвет на вершине, красивые виды и одно из самых ярких впечатлений на Бали.</p>
-              <a href="/tours/batur.html" class="tour-link">Подробнее</a>
-            </div>
-          </article>
+/* ===== All Tours Link ===== */
+.all-tours-link { text-align:center; margin-top:40px; }
 
-          <article class="tour-card">
-            <div class="tour-card-body">
-              <p class="tour-tag">Остров / море</p>
-              <h3>Нуса-Пенида</h3>
-              <p>Панорамные локации, океан, клифы и насыщенный день с лучшими видами.</p>
-              <a href="/tours/nusa-penida.html" class="tour-link">Подробнее</a>
-            </div>
-          </article>
+/* ===== Individual Tour Card ===== */
+.tour-card--individual { background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%); }
+.tour-card--individual .tour-card-body h3 { color:#fff; }
+.tour-card--individual .tour-card-body .tour-card-desc { color:rgba(255,255,255,.7); }
+.tour-card--individual .tour-card-chip { background:rgba(255,255,255,.12); color:rgba(255,255,255,.8); }
+.tour-card--individual .tour-card-price { color:#fff; }
+.tour-card--individual .tour-card-price small { color:rgba(255,255,255,.6); }
+.tour-card--individual .tour-card-badge { background:rgba(255,255,255,.2); }
+.tour-card--individual .tour-card-link { background:#25d366; }
+.tour-card--individual .tour-card-link:hover { background:#1ebe5d; }
 
-          <article class="tour-card">
-            <div class="tour-card-body">
-              <p class="tour-tag">Культура / фото</p>
-              <h3>Убуд и рисовые террасы</h3>
-              <p>Храмы, джунгли, террасы, качели и самые атмосферные места центрального Бали.</p>
-              <a href="/tours/ubud.html" class="tour-link">Подробнее</a>
-            </div>
-          </article>
-        </div>
+/* ===== Individual Tour Section ===== */
+.individual-section { background:#fff; }
+.individual-img { border-radius:16px; overflow:hidden; }
+.individual-img img { width:100%; height:100%; object-fit:cover; min-height:360px; }
+.individual-list { list-style:none; margin:20px 0; }
+.individual-list li { padding:8px 0; font-size:15px; color:#4a5568; display:flex; align-items:center; gap:10px; }
+.individual-check { color:#25d366; font-weight:700; }
 
-        <div class="section-actions">
-          <a class="btn btn-primary" href="/tours.html">Все экскурсии</a>
-        </div>
-      </div>
-    </section>
+/* ===== How We Work ===== */
+.how-we-work { background:#fff; }
+.steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; counter-reset:step; }
+.step-card { text-align:center; position:relative; }
+.step-num { width:56px; height:56px; border-radius:50%; background:#e8f5e9; color:#25d366; font-size:24px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; }
+.step-card h3 { font-size:16px; font-weight:700; margin-bottom:8px; color:#2d3436; }
+.step-card p { font-size:14px; color:#636e72; line-height:1.6; }
 
-    <section class="why-us" id="why-us">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Почему BaliTrip</p>
-          <h2>Сделано проще, понятнее и удобнее для туриста</h2>
-        </div>
+/* ===== Contact Form ===== */
+.form-section { background:linear-gradient(135deg,#2d3436 0%,#1a1a2e 100%); padding:72px 0; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.form-info h2 { font-size:30px; font-weight:800; color:#fff; margin-bottom:14px; }
+.form-info p { font-size:16px; color:rgba(255,255,255,.7); line-height:1.7; }
+.contact-form { display:flex; flex-direction:column; gap:16px; }
+.contact-form input, .contact-form textarea { width:100%; padding:14px 18px; border:1px solid rgba(255,255,255,.15); border-radius:12px; background:rgba(255,255,255,.08); color:#fff; font-size:15px; font-family:inherit; transition:border-color .2s; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color:rgba(255,255,255,.4); }
+.contact-form input:focus, .contact-form textarea:focus { outline:none; border-color:rgba(37,211,102,.6); }
+.contact-form textarea { min-height:100px; resize:vertical; }
+.form-consent { font-size:13px; color:rgba(255,255,255,.5); display:flex; align-items:flex-start; gap:8px; }
+.form-consent input[type=checkbox] { margin-top:2px; accent-color:#25d366; }
+.btn-submit { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#25d366; color:#fff; font-size:16px; font-weight:700; padding:16px 36px; border-radius:50px; border:none; cursor:pointer; transition:background .2s,transform .15s; }
+.btn-submit:hover { background:#1ebe5d; transform:translateY(-2px); }
 
-        <div class="why-grid">
-          <article class="why-card">
-            <h3>Понятная структура</h3>
-            <p>У каждой экскурсии будет отдельная страница с нормальным описанием и ключевой информацией.</p>
-          </article>
+/* ===== Footer ===== */
+.site-footer { background:#fff; border-top:1px solid #e8eaed; padding:36px 0; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.footer-contacts { display:flex; align-items:center; gap:24px; font-size:14px; }
+.footer-contacts a { color:#636e72; transition:color .2s; }
+.footer-contacts .footer-wa { color:#25d366; font-weight:600; }
+.footer-disclaimer { font-size:12px; color:#b2bec3; max-width:480px; }
 
-          <article class="why-card">
-            <h3>Удобный выбор</h3>
-            <p>Можно быстро сравнить маршруты и выбрать формат отдыха под себя.</p>
-          </article>
+/* ===== Breadcrumbs ===== */
+.breadcrumbs { padding:16px 0; font-size:13px; color:#636e72; }
+.breadcrumbs a { color:#636e72; transition:color .2s; }
+.breadcrumbs a:hover { color:#2d3436; }
+.breadcrumbs span { margin:0 6px; }
 
-          <article class="why-card">
-            <h3>Современный сайт</h3>
-            <p>Быстрая загрузка, мобильная адаптация и чистая структура без конструктора.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="booking" id="booking">
-      <div class="container booking-box">
-        <div>
-          <p class="section-kicker">Как забронировать</p>
-          <h2>Простой путь: написал → уточнил → поехал</h2>
-          <ol class="booking-steps">
-            <li>Выбираешь экскурсию или пишешь задачу.</li>
-            <li>Уточняются дата, состав группы и детали.</li>
-            <li>Получаешь подтверждение и готовый маршрут.</li>
-          </ol>
-        </div>
-
-        <div class="booking-cta">
-          <a class="btn btn-primary btn-full" href="https://wa.me/" target="_blank" rel="noopener">
-            Забронировать в WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">FAQ</p>
-          <h2>Частые вопросы</h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Можно ли подобрать индивидуальный маршрут?</summary>
-            <p>Да, можно адаптировать программу под интересы, состав группы и удобное время.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Как быстро приходит ответ?</summary>
-            <p>Обычно ответы приходят быстро, так как основной канал связи — WhatsApp.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Есть ли экскурсии для семей с детьми?</summary>
-            <p>Да, можно подобрать более спокойные и комфортные маршруты для семьи.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container final-cta-box">
-        <div>
-          <p class="section-kicker">Готовы выбрать экскурсию?</p>
-          <h2>Напишите в WhatsApp и получите маршрут под ваш отдых</h2>
-        </div>
-        <a class="btn btn-primary" href="https://wa.me/" target="_blank" rel="noopener">
-          Написать сейчас
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>BaliTrip</strong>
-        <p>Экскурсии на Бали без конструктора, с нормальным UX и сохранением SEO-основы.</p>
-      </div>
-      <div>
-        <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-</body>
-</html>
+/* ===== Why Us (tours page) ===== */
+.why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.why-card { background:#f5f6f8; border-radius:14px; padding:28px 24px; text-align:center; transition:box-shadow .2s; }
+.why-card:hover { box-shadow:0 4px 20px rgba(0,0,0,.06); }
+.why-icon { width:48px; height:48px; margin:0 auto 16px; background:#e8f5e9; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:22px; }
+.why-card h3 { font-size:15px; font-weight:700; margin-bottom:6px; color:#2d3436; }
+.why-card p { font-size:13px; color:#636e72; line-height:1.5; }
