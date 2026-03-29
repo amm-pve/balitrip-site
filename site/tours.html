@@ -60,13 +60,7 @@
     .how-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
     .contact-section { background: var(--dark); color: #fff; border-radius: 48px; padding: 80px 40px; margin-bottom: 100px; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .contact-form { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); }
-    .form-group { margin-bottom: 24px; }
-    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); }
-    .form-group input, .form-group textarea { width: 100%; padding: 16px; border: 2px solid #f0f0f0; border-radius: 16px; font-family: inherit; font-size: 16px; transition: 0.3s; }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; background: #fff; }
-    .btn-submit { width: 100%; background: var(--primary); color: #fff; border: none; padding: 20px; border-radius: 16px; font-weight: 800; font-size: 18px; cursor: pointer; transition: 0.3s; }
-    .btn-submit:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    .contact-wa-box { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); text-align: center; }
     .site-footer { background: #000; color: #fff; padding: 80px 0 40px; text-align: center; }
     .footer-logo { font-size: 32px; font-weight: 900; margin-bottom: 40px; display: block; text-decoration: none; color: #fff; }
     .footer-logo span { color: var(--primary); }
@@ -87,13 +81,13 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">Bali<span>Trip</span></a>
+      <a href="index.html" class="logo">Bali<span>Trip</span></a>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="/">Главная</a></li>
-          <li><a href="/tours.html" class="active">Экскурсии</a></li>
-          <li><a href="/#how-we-work">Как заказать</a></li>
-          <li><a href="/#contact-form">Заявка на тур</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="tours.html" class="active">Экскурсии</a></li>
+          <li><a href="index.html#how-we-work">Как заказать</a></li>
+          <li><a href="index.html#contact-wa">Заявка на тур</a></li>
           <li><a href="https://wa.me/6285935490002" class="nav-wa">WhatsApp</a></li>
         </ul>
       </nav>
@@ -108,7 +102,7 @@
         <h1 class="section-title">Наши экскурсии</h1>
         <p class="section-subtitle">Откройте для себя самые красивые уголки Бали с комфортом и профессиональным гидом.</p>
         <div class="tours-grid">
-        <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card">
+        <a href="ubut-i-okrestnosti-derevni.html" class="tour-card">
           <div class="tour-card-img"><img src="assets/ubud_1.jpg" alt="Убут и окрестности деревни"></div>
           <div class="tour-card-body">
             <h3>Убут и окрестности деревни</h3>
@@ -120,7 +114,7 @@
           </div>
         </a>
         
-        <a href="/priklyuchencheskiy-tur.html" class="tour-card">
+        <a href="priklyuchencheskiy-tur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Bsx7ZXviUEcraGIQ_gUBZ5CdcGw=/8e6d329dd9d1493.s2.siteapi.org/page/rfumo2l751c444wcok84os00kcokoo" alt="Приключенческий тур"></div>
           <div class="tour-card-body">
             <h3>Приключенческий тур</h3>
@@ -134,7 +128,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" alt="Тур к вулкану без подъема 1"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 1</h3>
@@ -146,7 +140,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" alt="Тур к вулкану без подъема 2"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 2</h3>
@@ -162,7 +156,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-3.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/HHkHQhtvYOp7P-B3s9RC33xXbYw=/8e6d329dd9d1493.s2.siteapi.org/page/qm3t1hb995c8g884ogkk84ocso80gg" alt="Тур к вулкану без подъема 3"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 3</h3>
@@ -175,7 +169,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card">
+        <a href="tur-na-severo-zapad-ostrova-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/yRN1oEVm6qPoRaa-DjVoFLOpY5M=/8e6d329dd9d1493.s2.siteapi.org/page/awiq9ec10cw840ws404sgkggcccscs" alt="Тур на северо-запад острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 1</h3>
@@ -188,7 +182,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-severo-zapad-ostrova-2.html" class="tour-card">
+        <a href="tur-na-severo-zapad-ostrova-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/5e6m6D__p8az4jXClYSok_U3rCM=/8e6d329dd9d1493.s2.siteapi.org/page/mddeaha1328wcgs84sokk0cskcw44o" alt="Тур на северо-запад острова 2"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 2</h3>
@@ -201,7 +195,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-vostok-ostrova.html" class="tour-card">
+        <a href="tur-na-vostok-ostrova.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/_aZmk1Rz6BmnNdRA2GsxgSAHk6Y=/8e6d329dd9d1493.s2.siteapi.org/page/i5oaqb3eo0g84ko0wkkgk4gssksk8w" alt="Тур на восток острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на восток острова 1</h3>
@@ -213,7 +207,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-vostok-ostrova-2.html" class="tour-card">
+        <a href="tur-na-vostok-ostrova-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Z7jQZiwOuFoqejj9slPIFHa0LZg=/8e6d329dd9d1493.s2.siteapi.org/page/bwfmza74ff484o80cwg8wwoss0sgo0" alt="Тур на восток острова 2"></div>
           <div class="tour-card-body">
             <h3>Тур на восток острова 2</h3>
@@ -225,7 +219,7 @@
           </div>
         </a>
         
-        <a href="/tur-po-plyazham-na-yuge-bali.html" class="tour-card">
+        <a href="tur-po-plyazham-na-yuge-bali.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/mv0QfkP_WDL8jBKvOm-Gxdiqy7Q=/8e6d329dd9d1493.s2.siteapi.org/page/57gu19hvenoco8swsok80808wco884" alt="Тур по пляжам на Юге Бали"></div>
           <div class="tour-card-body">
             <h3>Тур по пляжам на Юге Бали</h3>
@@ -237,7 +231,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-sever-ostrova.html" class="tour-card">
+        <a href="tur-na-sever-ostrova.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/oBJBg-3nwHR4E9CjHyf20l9UJ_4=/8e6d329dd9d1493.s2.siteapi.org/page/qgnuym7dc1coogoco88owkgs4gskg8" alt="Тур на север острова"></div>
           <div class="tour-card-body">
             <h3>Тур на север острова</h3>
@@ -250,7 +244,7 @@
           </div>
         </a>
         
-        <a href="/voshozhdenie-po-vulkanu-batur.html" class="tour-card">
+        <a href="voshozhdenie-po-vulkanu-batur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/y8-D7EK1M3O5vK95nJu5BVcZJt0=/8e6d329dd9d1493.s2.siteapi.org/page/evqozcfr3qosks4so0w48w80w8cgs8" alt="Восхождение по вулкану Батур"></div>
           <div class="tour-card-body">
             <h3>Восхождение по вулкану Батур</h3>
@@ -264,7 +258,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-sever-bali-k-delfinam.html" class="tour-card">
+        <a href="tur-na-sever-bali-k-delfinam.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/_MTpTdc8qabI0908W8tgNNrTW-g=/8e6d329dd9d1493.s2.siteapi.org/page/4qtdeykdvqqs4w0g00gwg08wg08wcc" alt="Тур на север Бали к дельфинам"></div>
           <div class="tour-card-body">
             <h3>Тур на север Бали к дельфинам</h3>
@@ -277,7 +271,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-sever-bali-s-nochyovkoy.html" class="tour-card">
+        <a href="tur-na-sever-bali-s-nochyovkoy.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/q8bVbT2lMLXd2d2wH1EB3THDTK0=/8e6d329dd9d1493.s2.siteapi.org/page/asukvmmyhoo4k8sgk4ckwwcc4c0cgw" alt="Тур на север Бали с ночёвкой"></div>
           <div class="tour-card-body">
             <h3>Тур на север Бали с ночёвкой</h3>

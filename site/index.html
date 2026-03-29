@@ -60,13 +60,7 @@
     .how-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
     .contact-section { background: var(--dark); color: #fff; border-radius: 48px; padding: 80px 40px; margin-bottom: 100px; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .contact-form { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); }
-    .form-group { margin-bottom: 24px; }
-    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); }
-    .form-group input, .form-group textarea { width: 100%; padding: 16px; border: 2px solid #f0f0f0; border-radius: 16px; font-family: inherit; font-size: 16px; transition: 0.3s; }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; background: #fff; }
-    .btn-submit { width: 100%; background: var(--primary); color: #fff; border: none; padding: 20px; border-radius: 16px; font-weight: 800; font-size: 18px; cursor: pointer; transition: 0.3s; }
-    .btn-submit:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    .contact-wa-box { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); text-align: center; }
     .site-footer { background: #000; color: #fff; padding: 80px 0 40px; text-align: center; }
     .footer-logo { font-size: 32px; font-weight: 900; margin-bottom: 40px; display: block; text-decoration: none; color: #fff; }
     .footer-logo span { color: var(--primary); }
@@ -87,13 +81,13 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">Bali<span>Trip</span></a>
+      <a href="index.html" class="logo">Bali<span>Trip</span></a>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="/" class="active">Главная</a></li>
-          <li><a href="/tours.html">Экскурсии</a></li>
-          <li><a href="/#how-we-work">Как заказать</a></li>
-          <li><a href="/#contact-form">Заявка на тур</a></li>
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="tours.html">Экскурсии</a></li>
+          <li><a href="index.html#how-we-work">Как заказать</a></li>
+          <li><a href="index.html#contact-wa">Заявка на тур</a></li>
           <li><a href="https://wa.me/6285935490002" class="nav-wa">WhatsApp</a></li>
         </ul>
       </nav>
@@ -110,8 +104,8 @@
         <h1>Магия Бали<br>в каждом туре</h1>
         <p>Индивидуальные экскурсии с русским гидом. Погрузитесь в культуру, природу и атмосферу острова без спешки и толп туристов.</p>
         <div class="hero-btns">
-          <a href="/tours.html" class="btn btn-white">Выбрать экскурсию</a>
-          <a href="https://wa.me/6285935490002" class="btn btn-primary"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать в WhatsApp</a>
+          <a href="tours.html" class="btn btn-white">Выбрать экскурсию</a>
+          <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%8D%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8E%20%D0%BD%D0%B0%20%D0%91%D0%B0%D0%BB%D0%B8." class="btn btn-primary"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать в WhatsApp</a>
         </div>
       </div>
     </section>
@@ -120,7 +114,7 @@
         <h2 class="section-title">Популярные направления</h2>
         <p class="section-subtitle">Места, которые обязательно стоит посетить хотя бы раз в жизни</p>
         <div class="tours-grid">
-        <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card">
+        <a href="ubut-i-okrestnosti-derevni.html" class="tour-card">
           <div class="tour-card-img"><img src="assets/ubud_1.jpg" alt="Убут и окрестности деревни"></div>
           <div class="tour-card-body">
             <h3>Убут и окрестности деревни</h3>
@@ -131,7 +125,7 @@
           </div>
         </a>
         
-        <a href="/priklyuchencheskiy-tur.html" class="tour-card">
+        <a href="priklyuchencheskiy-tur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Bsx7ZXviUEcraGIQ_gUBZ5CdcGw=/8e6d329dd9d1493.s2.siteapi.org/page/rfumo2l751c444wcok84os00kcokoo" alt="Приключенческий тур"></div>
           <div class="tour-card-body">
             <h3>Приключенческий тур</h3>
@@ -142,7 +136,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" alt="Тур к вулкану без подъема 1"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 1</h3>
@@ -153,7 +147,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" alt="Тур к вулкану без подъема 2"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 2</h3>
@@ -164,7 +158,7 @@
           </div>
         </a>
         
-        <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card">
+        <a href="tur-k-vulkanu-bez-podema-3.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/HHkHQhtvYOp7P-B3s9RC33xXbYw=/8e6d329dd9d1493.s2.siteapi.org/page/qm3t1hb995c8g884ogkk84ocso80gg" alt="Тур к вулкану без подъема 3"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 3</h3>
@@ -175,7 +169,7 @@
           </div>
         </a>
         
-        <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card">
+        <a href="tur-na-severo-zapad-ostrova-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/yRN1oEVm6qPoRaa-DjVoFLOpY5M=/8e6d329dd9d1493.s2.siteapi.org/page/awiq9ec10cw840ws404sgkggcccscs" alt="Тур на северо-запад острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 1</h3>
@@ -187,7 +181,7 @@
         </a>
         </div>
         <div style="text-align: center; margin-top: 60px;">
-          <a href="/tours.html" class="btn btn-white" style="border: 2px solid #eee;">Смотреть все 14 туров</a>
+          <a href="tours.html" class="btn btn-white" style="border: 2px solid #eee;">Смотреть все 14 туров</a>
         </div>
       </div>
     </section>
@@ -215,33 +209,17 @@
       </div>
     </section>
     <section class="container">
-      <div class="contact-section" id="contact-form">
+      <div class="contact-section" id="contact-wa">
         <div class="contact-grid">
           <div class="contact-info">
             <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 24px; line-height: 1.1;">Готовы к приключению?</h2>
-            <p style="font-size: 18px; opacity: 0.8; margin-bottom: 40px;">Оставьте заявку, и мы свяжемся с вами в ближайшее время, чтобы обсудить все детали вашего отдыха.</p>
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-              <a href="https://wa.me/6285935490002" style="color: #fff; text-decoration: none; font-size: 20px; font-weight: 700; display: flex; align-items: center;">
-                <span style="background: var(--primary); padding: 10px; border-radius: 10px; margin-right: 15px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span> +62 859 3549 0002
-              </a>
-            </div>
+            <p style="font-size: 18px; opacity: 0.8; margin-bottom: 40px;">Просто напишите нам в WhatsApp. Мы ответим на все вопросы и поможем организовать лучший отдых на Бали.</p>
           </div>
-          <div class="contact-form">
-            <form action="#">
-              <div class="form-group">
-                <label>Ваше имя</label>
-                <input type="text" placeholder="Иван Иванов" required>
-              </div>
-              <div class="form-group">
-                <label>Телефон / WhatsApp</label>
-                <input type="tel" placeholder="+7 (___) ___-__-__" required>
-              </div>
-              <div class="form-group">
-                <label>Ваши пожелания</label>
-                <textarea placeholder="Какие места вы хотите посетить?"></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Отправить заявку</button>
-            </form>
+          <div class="contact-wa-box">
+            <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 20px;">Быстрая заявка</h3>
+            <p style="color: var(--gray); margin-bottom: 32px;">Нажмите на кнопку ниже, чтобы начать чат с гидом. Мы на связи!</p>
+            <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%8D%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8E%20%D0%BD%D0%B0%20%D0%91%D0%B0%D0%BB%D0%B8." class="btn btn-primary" style="width: 100%; padding: 24px; font-size: 20px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Оставить заявку в WhatsApp</a>
+            <p style="margin-top: 24px; font-weight: 600; color: var(--gray);">Или позвоните нам: <br><span style="color: var(--dark);">+62 859 3549 0002</span></p>
           </div>
         </div>
       </div>
