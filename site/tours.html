@@ -41,19 +41,19 @@
     .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
     .btn svg { width: 20px; height: 20px; margin-right: 10px; }
     .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px; }
-    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); }
+    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); position: relative; cursor: pointer; text-decoration: none; color: inherit; }
     .tour-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .tour-card-img { height: 260px; overflow: hidden; position: relative; }
     .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
     .tour-card:hover .tour-card-img img { transform: scale(1.1); }
-    .tour-card-body { padding: 32px; flex-grow: 1; }
+    .tour-card-body { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; }
     .tour-card h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
     .tour-card p { color: var(--gray); font-size: 15px; margin-bottom: 24px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #f5f5f5; }
+    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #f5f5f5; margin-top: auto; }
     .tour-card-price { font-size: 22px; font-weight: 900; color: var(--dark); }
     .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; }
     .tour-card-link:after { content: '→'; margin-left: 6px; transition: 0.2s; }
-    .tour-card-link:hover:after { transform: translateX(4px); }
+    .tour-card:hover .tour-card-link:after { transform: translateX(4px); }
     .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
     .how-card { background: #fff; padding: 48px 32px; border-radius: 32px; text-align: center; box-shadow: var(--shadow); }
     .how-num { width: 64px; height: 64px; background: var(--primary); color: #fff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 900; transform: rotate(-5deg); }
@@ -108,19 +108,19 @@
         <h1 class="section-title">Наши экскурсии</h1>
         <p class="section-subtitle">Откройте для себя самые красивые уголки Бали с комфортом и профессиональным гидом.</p>
         <div class="tours-grid">
-        <div class="tour-card">
+        <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card">
           <div class="tour-card-img"><img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=1200&q=80" alt="Убут и окрестности деревни"></div>
           <div class="tour-card-body">
             <h3>Убут и окрестности деревни</h3>
             <p>На этом туре мы будем посещать Парк птиц и рептилий, дальше деревню ремесленников Челук (ювелирный центр, серебро, золото, жемчуг, топас, по...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">50$</span>
-              <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/priklyuchencheskiy-tur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Bsx7ZXviUEcraGIQ_gUBZ5CdcGw=/8e6d329dd9d1493.s2.siteapi.org/page/rfumo2l751c444wcok84os00kcokoo" alt="Приключенческий тур"></div>
           <div class="tour-card-body">
             <h3>Приключенческий тур</h3>
@@ -129,24 +129,24 @@
 Сделать кадр над пропаст...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">45$</span>
-              <a href="/priklyuchencheskiy-tur.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" alt="Тур к вулкану без подъема 1"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 1</h3>
             <p>Этот тур мы начнём с посещения деревни Батубулан, где мы увидим балийский национальный танец (Barong dance) - самое интересное представление...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">60$</span>
-              <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" alt="Тур к вулкану без подъема 2"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 2</h3>
@@ -157,12 +157,12 @@
 Искупаем...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">55$</span>
-              <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/HHkHQhtvYOp7P-B3s9RC33xXbYw=/8e6d329dd9d1493.s2.siteapi.org/page/qm3t1hb995c8g884ogkk84ocso80gg" alt="Тур к вулкану без подъема 3"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 3</h3>
@@ -170,12 +170,12 @@
 Посетим Бали сафари парк, где на 60 гектарах обитают самые разные животные со всех уголков света: носороги, жирафы, бегемот...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">55$</span>
-              <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/yRN1oEVm6qPoRaa-DjVoFLOpY5M=/8e6d329dd9d1493.s2.siteapi.org/page/awiq9ec10cw840ws404sgkggcccscs" alt="Тур на северо-запад острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 1</h3>
@@ -183,12 +183,12 @@
 Далее мы направимся в горы, по дороге по желанию вы посе...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">60$</span>
-              <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-severo-zapad-ostrova-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/5e6m6D__p8az4jXClYSok_U3rCM=/8e6d329dd9d1493.s2.siteapi.org/page/mddeaha1328wcgs84sokk0cskcw44o" alt="Тур на северо-запад острова 2"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 2</h3>
@@ -196,48 +196,48 @@
 Далее мы увидим невероятные по красоте рисовые террасы Джати лувих, входящи...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">70$</span>
-              <a href="/tur-na-severo-zapad-ostrova-2.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-vostok-ostrova.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/_aZmk1Rz6BmnNdRA2GsxgSAHk6Y=/8e6d329dd9d1493.s2.siteapi.org/page/i5oaqb3eo0g84ko0wkkgk4gssksk8w" alt="Тур на восток острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на восток острова 1</h3>
             <p>На этом туре мы посетим получающий неизменно повышенное внимание в соцсетях живописный пляж Вирджин бич с белым и чёрным песком, где вы смож...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">70$</span>
-              <a href="/tur-na-vostok-ostrova.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-vostok-ostrova-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Z7jQZiwOuFoqejj9slPIFHa0LZg=/8e6d329dd9d1493.s2.siteapi.org/page/bwfmza74ff484o80cwg8wwoss0sgo0" alt="Тур на восток острова 2"></div>
           <div class="tour-card-body">
             <h3>Тур на восток острова 2</h3>
             <p>Этот тур начинается со сплава по реке Телага Ваджа на рафтах (надежных надувных лодках). После двух часов сплава, мы посетим самый старый и ...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">60$</span>
-              <a href="/tur-na-vostok-ostrova-2.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-po-plyazham-na-yuge-bali.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/mv0QfkP_WDL8jBKvOm-Gxdiqy7Q=/8e6d329dd9d1493.s2.siteapi.org/page/57gu19hvenoco8swsok80808wco884" alt="Тур по пляжам на Юге Бали"></div>
           <div class="tour-card-body">
             <h3>Тур по пляжам на Юге Бали</h3>
             <p>Этот тур мы начнём с посещения пляжа Танджунг беноа, где можно оценить самые разные морские развлечения: снорклинг (плавание с маской), водн...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">50$</span>
-              <a href="/tur-po-plyazham-na-yuge-bali.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-sever-ostrova.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/oBJBg-3nwHR4E9CjHyf20l9UJ_4=/8e6d329dd9d1493.s2.siteapi.org/page/qgnuym7dc1coogoco88owkgs4gskg8" alt="Тур на север острова"></div>
           <div class="tour-card-body">
             <h3>Тур на север острова</h3>
@@ -245,12 +245,12 @@
 После мы направимся в ботанический сад, далее - озеро Бератан на берегу кото...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">85$</span>
-              <a href="/tur-na-sever-ostrova.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/voshozhdenie-po-vulkanu-batur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/y8-D7EK1M3O5vK95nJu5BVcZJt0=/8e6d329dd9d1493.s2.siteapi.org/page/evqozcfr3qosks4so0w48w80w8cgs8" alt="Восхождение по вулкану Батур"></div>
           <div class="tour-card-body">
             <h3>Восхождение по вулкану Батур</h3>
@@ -259,12 +259,12 @@
 Вас вст...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">65$</span>
-              <a href="/voshozhdenie-po-vulkanu-batur.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-sever-bali-k-delfinam.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/_MTpTdc8qabI0908W8tgNNrTW-g=/8e6d329dd9d1493.s2.siteapi.org/page/4qtdeykdvqqs4w0g00gwg08wg08wcc" alt="Тур на север Бали к дельфинам"></div>
           <div class="tour-card-body">
             <h3>Тур на север Бали к дельфинам</h3>
@@ -272,12 +272,12 @@
 На пляже Ловина бич мы сядем на кат...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">70$</span>
-              <a href="/tur-na-sever-bali-k-delfinam.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-sever-bali-s-nochyovkoy.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/q8bVbT2lMLXd2d2wH1EB3THDTK0=/8e6d329dd9d1493.s2.siteapi.org/page/asukvmmyhoo4k8sgk4ckwwcc4c0cgw" alt="Тур на север Бали с ночёвкой"></div>
           <div class="tour-card-body">
             <h3>Тур на север Бали с ночёвкой</h3>
@@ -288,10 +288,10 @@
 Рисовые террасы Джати лувих, входящие в насле...</p>
             <div class="tour-card-footer">
               <span class="tour-card-price">По запросу</span>
-              <a href="/tur-na-sever-bali-s-nochyovkoy.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         </div>
       </div>
     </section>
