@@ -3,103 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Туры на Бали - Тур на север Бали с ночёвкой</title>
-  <meta name="description" content="Тур на север Бали с ночёвкой — экскурсия на Бали с русскоговорящим гидом.">
+  <title>Тур на север Бали с ночёвкой - BaliTrip</title>
+  <meta name="description" content="Забронируйте тур Тур на север Бали с ночёвкой на Бали с русскоговорящим гидом.">
   <style>
-    :root {
-      --primary: #25d366;
-      --dark: #1a1a1a;
-      --light: #f5f6f8;
-      --white: #ffffff;
-      --gray: #666666;
-      --border: #e1e4e8;
-      --shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
+    :root { --primary: #25d366; --dark: #1a1a1a; --light: #f5f6f8; --white: #ffffff; --gray: #666666; --border: #e1e4e8; --shadow: 0 4px 20px rgba(0,0,0,0.08); }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
+    .section { padding: 60px 0; }
     .section-title { font-size: 32px; margin-bottom: 16px; font-weight: 700; }
     .section-title--center { text-align: center; }
-    .section-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 48px; max-width: 700px; }
-    .section-subtitle--center { text-align: center; margin-left: auto; margin-right: auto; }
-
-    /* Header */
+    .section-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 48px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
     .site-header { background: var(--white); height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
     .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
     .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--dark); }
     .logo span { color: var(--primary); }
     .nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 15px; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 15px; }
+    .nav-links a.active { color: var(--primary); }
     .nav-wa { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 50px; }
-    .menu-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 6px; }
-    .menu-toggle span { width: 24px; height: 2px; background: var(--dark); transition: 0.3s; }
-
-    /* Hero */
-    .hero { position: relative; height: 80vh; min-height: 600px; display: flex; align-items: center; overflow: hidden; background: #000; }
-    .hero--compact { height: 50vh; min-height: 400px; }
-    .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
-    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8), transparent); }
-    .hero-content { position: relative; z-index: 10; color: var(--white); max-width: 800px; }
-    .hero h1 { font-size: 56px; line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
-    .hero-subtitle { font-size: 20px; margin-bottom: 32px; opacity: 0.9; }
-    .hero-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
-    .hero-chip { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 50px; font-size: 14px; border: 1px solid rgba(255,255,255,0.2); }
-    .btn-wa { display: inline-flex; align-items: center; gap: 12px; background: var(--primary); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 50px; font-weight: 700; font-size: 18px; transition: transform 0.2s; }
-    .btn-wa:hover { transform: translateY(-2px); }
-    .btn-wa svg { width: 24px; height: 24px; fill: currentColor; }
-    .btn-hint { display: block; margin-top: 12px; font-size: 13px; opacity: 0.6; }
-
-    /* Cards */
-    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 32px; }
-    .tour-card { background: var(--white); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-    .tour-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
-    .tour-card-img { height: 240px; overflow: hidden; }
-    .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .tour-card:hover .tour-card-img img { transform: scale(1.05); }
-    .tour-card-body { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
-    .tour-card h3 { font-size: 22px; margin-bottom: 12px; font-weight: 700; }
-    .tour-card-desc { color: var(--gray); font-size: 15px; margin-bottom: 24px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid var(--border); }
-    .tour-card-price { font-size: 20px; font-weight: 800; color: var(--dark); }
-    .tour-card-price small { font-size: 14px; color: var(--gray); font-weight: 400; }
-    .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; }
-
-    /* Details Page */
-    .details-grid { display: grid; grid-template-columns: 1fr 350px; gap: 48px; }
-    .details-text h2 { margin-bottom: 24px; }
-    .details-text p { font-size: 17px; color: #444; margin-bottom: 24px; white-space: pre-line; }
-    .details-sidebar { background: var(--white); padding: 32px; border-radius: 16px; box-shadow: var(--shadow); height: fit-content; position: sticky; top: 120px; }
-    .details-sidebar h3 { margin-bottom: 24px; font-size: 20px; }
-    .sidebar-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    .sidebar-label { color: var(--gray); font-size: 14px; }
-    .sidebar-value { font-weight: 600; }
-    
-    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-top: 40px; }
-    .gallery-img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: 0.3s; }
-    .gallery-img:hover { opacity: 0.9; transform: scale(1.02); }
-
-    /* Footer */
-    .site-footer { background: var(--dark); color: var(--white); padding: 60px 0; margin-top: 80px; }
-    .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .footer-contacts { display: flex; gap: 32px; margin-bottom: 32px; }
-    .footer-contacts a { color: var(--white); text-decoration: none; font-weight: 600; }
-    .footer-disclaimer { font-size: 13px; opacity: 0.5; max-width: 600px; }
-
-    @media (max-width: 900px) {
-      .hero h1 { font-size: 40px; }
-      .details-grid { grid-template-columns: 1fr; }
-      .details-sidebar { position: static; }
-    }
-    @media (max-width: 640px) {
-      .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 40px 20px; border-bottom: 1px solid var(--border); }
-      .nav-links.active { display: flex; }
-      .menu-toggle { display: flex; }
-      .hero { height: 90vh; }
-      .hero h1 { font-size: 32px; }
-      .footer-contacts { flex-direction: column; gap: 16px; }
-    }
+    .hero { position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; overflow: hidden; background: #000; color: #fff; }
+    .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; z-index: 10; max-width: 800px; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .btn-wa { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-weight: 700; }
+    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+    .tour-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; }
+    .tour-card:hover { transform: translateY(-5px); }
+    .tour-card-img { height: 200px; }
+    .tour-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .tour-card-body { padding: 20px; flex-grow: 1; }
+    .tour-card h3 { margin-bottom: 10px; }
+    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
+    .details-grid { display: grid; grid-template-columns: 1fr 350px; gap: 40px; }
+    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+    .gallery-img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
+    .sidebar { background: #fff; padding: 25px; border-radius: 15px; box-shadow: var(--shadow); height: fit-content; position: sticky; top: 100px; }
+    .sidebar-item { margin-bottom: 15px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+    .site-footer { background: var(--dark); color: #fff; padding: 40px 0; text-align: center; margin-top: 60px; }
+    .footer-contacts { margin-bottom: 20px; }
+    .footer-contacts a { color: #fff; margin: 0 15px; text-decoration: none; }
+    @media (max-width: 768px) { .details-grid { grid-template-columns: 1fr; } .sidebar { position: static; } .hero h1 { font-size: 32px; } }
     </style>
 </head>
 <body>
@@ -113,7 +58,6 @@
           <li><a href="/#how-we-work">Как заказать</a></li>
           <li><a href="/#contact-form">Заявка на тур</a></li>
           <li><a href="https://wa.me/6285935490002" class="nav-wa">WhatsApp</a></li>
-          <li><a href="mailto:MADETINGKES@MAIL.RU">Email</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
@@ -122,111 +66,69 @@
     </div>
   </header>
   <main>
-
-    <section class="hero hero--compact">
-      <img referrerpolicy="no-referrer" class="hero-img" src="https://i.siteapi.org/Xqv1qfWBLPfFAyJ8GBvMmHCVjxE=/fit-in/256x256/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/6vxgxvt1nh4ckk4s8g4w0ggkwg8w4o" alt="Тур на север Бали с ночёвкой">
+    <section class="hero">
+      <img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" class="hero-img">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <h1>Тур на север Бали с ночёвкой</h1>
-        <div class="hero-chips">          <span class="hero-chip">Храм Танах лот</span>
-          <span class="hero-chip">Парк бабочек ( по желанию )</span>
-          <span class="hero-chip">Затерянный в джунглях храм Пура Батукпру</span>
-          <span class="hero-chip">Рисовые террасы Джати лувих, входящие в наследие UNESCO</span>
-          <span class="hero-chip">Храм Пура Улун Дану на берегу озера Бератан</span>
-          <span class="hero-chip">Водопад Гит-гит</span>
-          <span class="hero-chip">Пляж Ловина Бич, где мы и останемся на ночь.</span>
-          <span class="hero-chip">Круиз с дельфинами</span>
-          <span class="hero-chip">Горячий источник Банджар</span>
-          <span class="hero-chip">Буддийский храм в Банджаре</span>
-          <span class="hero-chip">Водопад Мундук</span>
-          <span class="hero-chip">Смотровая площадка, с которой открывается вид на спаренные озера Буян и Тамблинган</span>
-          <span class="hero-chip">Ботанический сад.</span>
-          <span class="hero-chip">Мистический заброшенный отель.</span>
-</div>
-        <a class="btn-wa" href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BD%D0%B0%20%D1%81%D0%B5%D0%B2%D0%B5%D1%80%20%D0%91%D0%B0%D0%BB%D0%B8%20%D1%81%20%D0%BD%D0%BE%D1%87%D1%91%D0%B2%D0%BA%D0%BE%D0%B9.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0."><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать в WhatsApp</a>
+        <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BD%D0%B0%20%D1%81%D0%B5%D0%B2%D0%B5%D1%80%20%D0%91%D0%B0%D0%BB%D0%B8%20%D1%81%20%D0%BD%D0%BE%D1%87%D1%91%D0%B2%D0%BA%D0%BE%D0%B9" class="btn-wa"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Забронировать в WhatsApp</a>
       </div>
     </section>
-
     <section class="section">
       <div class="container">
         <div class="details-grid">
-          <div class="details-text">
-            <h2>Описание маршрута</h2>
-            <p>День 1
-
-*   Храм Танах лот,
-*   Парк бабочек ( по желанию ) ,
-*   Затерянный в джунглях храм Пура Батукпру,
-*   Рисовые террасы Джати лувих, входящие в наследие UNESCO,
-*   Храм Пура Улун Дану на берегу озера Бератан,
-*   Водопад Гит-гит,
-*   Пляж Ловина Бич, где мы и останемся на ночь.
+          <div class="content">
+            <h2>Описание экскурсии</h2>
+            <p style="white-space: pre-line; margin-bottom: 30px;">День 1
+Храм Танах лот,
+Парк бабочек ( по желанию ) ,
+Затерянный в джунглях храм Пура Батукпру,
+Рисовые террасы Джати лувих, входящие в наследие UNESCO,
+Храм Пура Улун Дану на берегу озера Бератан,
+Водопад Гит-гит,
+Пляж Ловина Бич, где мы и останемся на ночь.
 
 День 2
-
-*   Круиз с дельфинами,
-*   Горячий источник Банджар,
-*   Буддийский храм в Банджаре,
-*   Водопад Мундук,
-*   Смотровая площадка, с которой открывается вид на спаренные озера Буян и Тамблинган,
-*   Ботанический сад.
-*   Мистический заброшенный отель.
-
+Круиз с дельфинами,
+Горячий источник Банджар,
+Буддийский храм в Банджаре,
+Водопад Мундук,
+Смотровая площадка, с которой открывается вид на спаренные озера Буян и Тамблинган,
+Ботанический сад.
+Мистический заброшенный отель.
 Время выезда: 8:30
-
 Стоимость тура:
-
-*   125$ / чел. на 2 человека,
-*   100$ / человек на 3 человека,
-*   85$ / человек на 4 человека,
-*   75$ / человек на 5 человек,
-*   70$ / человек на 6 человек.  
-    
-
+125$ / чел. на 2 человека,
+100$ / человек на 3 человека,
+85$ / человек на 4 человека,
+75$ / человек на 5 человек,
+70$ / человек на 6 человек.
 В стоимость тура входит:
-
-*   машина,
-*   бензин,
-*   все входные билеты,
-*   отель с завтраком,
-*   прогулка на катере с дельфинами,
-*   водитель и гид (я сам за рулем).  
-    
-
+машина,
+бензин,
+все входные билеты,
+отель с завтраком,
+прогулка на катере с дельфинами,
+водитель и гид (я сам за рулем).
 В стоимость тура не входит: оставшиеся входные билеты и питание</p>
-            <div class="photo-gallery">
-          <img referrerpolicy="no-referrer" src="https://i.siteapi.org/8e6d329dd9d1493.s2.siteapi.org/page/6vxgxvt1nh4ckk4s8g4w0ggkwg8w4o" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy">
-        </div>
+            <h2>Галерея</h2>
+            <div class="photo-gallery"><img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/q8bVbT2lMLXd2d2wH1EB3THDTK0=/8e6d329dd9d1493.s2.siteapi.org/page/asukvmmyhoo4k8sgk4ckwwcc4c0cgw" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/4PnBkQjZsHdOOlOEeCgFsxoFRnY=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/eqwqkk7s9igowksg8o8w4gcgk0s08g" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/gwSdvsRMVCon8xjq8R-YaK8cqwo=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/f8msj855q9s0c88sgoc84gwoc04gwg" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/iNiWyIJtJBEuE6XAreLQWNFgxl8=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/af09p63njqww4wok4gc0kws0o0g0cg" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/4cKZZKzyqkp4Ktt-eJemwpvEl5U=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/tli98lgzfb44ocskoow84w0c448044" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/R1gOBoqKanPEjnG4DlEmPM8CLmw=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/9w33d1bjie8k0okss4cw0408gcscss" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"><img src="https://i.siteapi.org/_OZD3vq7jRUVF-YTXpbA35qYg5E=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/occoa65iv6sw8o8cgog4c4gw4ksgo0" class="gallery-img" alt="Тур на север Бали с ночёвкой" loading="lazy"></div>
           </div>
-          <div class="details-sidebar">
-            <h3>Краткая информация</h3>
-            <div class="sidebar-item"><span class="sidebar-label">Время выезда</span><span class="sidebar-value">8</span></div><div class="sidebar-item"><span class="sidebar-label">Цена</span><span class="sidebar-value">от 70$ за человека</span></div><div class="sidebar-item"><span class="sidebar-label">Гид</span><span class="sidebar-value">Русскоговорящий</span></div>
-            <a class="btn-wa" href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BD%D0%B0%20%D1%81%D0%B5%D0%B2%D0%B5%D1%80%20%D0%91%D0%B0%D0%BB%D0%B8%20%D1%81%20%D0%BD%D0%BE%D1%87%D1%91%D0%B2%D0%BA%D0%BE%D0%B9.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0." style="margin-top:24px;width:100%;justify-content:center;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Забронировать</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="background:var(--white);">
-      <div class="container">
-        <div class="details-grid">
-          <div>
-            <h3>В стоимость входит</h3>
-            <ul>              <li>машина</li>
-              <li>бензин</li>
-              <li>водитель</li>
-</ul>
-          </div>
-          <div>
-            <h3>В стоимость не входит</h3>
-            <ul>              <li>оставшиеся входные билеты и питание</li>
-</ul>
+          <div class="sidebar">
+            <h3>Информация</h3>
+            <div class="sidebar-item"><span>Цена</span><strong>По запросу</strong></div>
+            <div class="sidebar-item"><span>Выезд</span><strong>8:30</strong></div>
+            <div class="sidebar-item"><span>Гид</span><strong>Русский</strong></div>
+            <div style="margin-top: 20px;">
+              <p><strong>Включено:</strong> </p>
+              <p style="margin-top: 10px;"><strong>Не включено:</strong> оставшиеся входные билеты и питание</p>
+            </div>
+            <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BD%D0%B0%20%D1%81%D0%B5%D0%B2%D0%B5%D1%80%20%D0%91%D0%B0%D0%BB%D0%B8%20%D1%81%20%D0%BD%D0%BE%D1%87%D1%91%D0%B2%D0%BA%D0%BE%D0%B9" class="btn-wa" style="width: 100%; justify-content: center; margin-top: 20px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать нам</a>
           </div>
         </div>
       </div>
     </section>
-    
-  </main>
+    </main>
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-contacts">
@@ -236,11 +138,5 @@
       <p class="footer-disclaimer">Данный сайт носит информационно-справочный характер и не является публичной офертой.</p>
     </div>
   </footer>
-  <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('active');
-      this.classList.toggle('active');
-    });
-    </script>
 </body>
 </html>
