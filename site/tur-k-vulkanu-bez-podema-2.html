@@ -1,159 +1,221 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тур к вулкану без подъема 2 - BaliTrip</title>
-  <meta name="description" content="Забронируйте тур Тур к вулкану без подъема 2 на Бали с русскоговорящим гидом.">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #25d366; --primary-dark: #128c7e; --dark: #1a1a1a; --light: #f8f9fa; --white: #ffffff; --gray: #6c757d; --border: #eee; --shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 100px 0; }
-    .section-title { font-size: 42px; margin-bottom: 16px; font-weight: 800; text-align: center; letter-spacing: -1px; }
-    .section-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 60px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .site-header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .logo { font-size: 26px; font-weight: 900; text-decoration: none; color: var(--dark); letter-spacing: -1px; }
-    .logo span { color: var(--primary); }
-    .nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; transition: 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-    .nav-wa { background: var(--primary); color: var(--white) !important; padding: 12px 24px; border-radius: 12px; transition: 0.3s; }
-    .nav-wa:hover { background: var(--primary-dark); transform: translateY(-2px); }
-    .hero { position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; background: #000; color: #fff; overflow: hidden; }
-    .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transform: scale(1.05); transition: 10s linear; }
-    .hero:hover .hero-img { transform: scale(1); }
-    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%); }
-    .hero-content { position: relative; z-index: 10; max-width: 700px; }
-    .hero h1 { font-size: 64px; font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -2px; }
-    .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; font-weight: 400; }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; border-radius: 14px; font-weight: 700; font-size: 16px; text-decoration: none; transition: 0.3s; cursor: pointer; border: none; }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
-    .btn-white { background: #fff; color: var(--dark); }
-    .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
-    .btn svg { width: 20px; height: 20px; margin-right: 10px; }
-    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px; }
-    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); position: relative; cursor: pointer; text-decoration: none; color: inherit; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-    .tour-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    .tour-card-img { height: 260px; overflow: hidden; position: relative; }
-    .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-    .tour-card:hover .tour-card-img img { transform: scale(1.1); }
-    .tour-card-body { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; }
-    .tour-card h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
-    .tour-card p { color: var(--gray); font-size: 15px; margin-bottom: 24px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #f5f5f5; margin-top: auto; }
-    .tour-card-price { font-size: 22px; font-weight: 900; color: var(--dark); }
-    .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; }
-    .tour-card-link:after { content: '→'; margin-left: 6px; transition: 0.2s; }
-    .tour-card:hover .tour-card-link:after { transform: translateX(4px); }
-    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-    .how-card { background: #fff; padding: 48px 32px; border-radius: 32px; text-align: center; box-shadow: var(--shadow); }
-    .how-num { width: 64px; height: 64px; background: var(--primary); color: #fff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 900; transform: rotate(-5deg); }
-    .how-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
-    .contact-section { background: var(--dark); color: #fff; border-radius: 48px; padding: 80px 40px; margin-bottom: 100px; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .contact-wa-box { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); text-align: center; }
-    .site-footer { background: #000; color: #fff; padding: 80px 0 40px; text-align: center; }
-    .footer-logo { font-size: 32px; font-weight: 900; margin-bottom: 40px; display: block; text-decoration: none; color: #fff; }
-    .footer-logo span { color: var(--primary); }
-    .footer-links { margin-bottom: 40px; display: flex; justify-content: center; gap: 40px; }
-    .footer-links a { color: #aaa; text-decoration: none; font-weight: 600; transition: 0.2s; }
-    .footer-links a:hover { color: #fff; }
-    .footer-copy { color: #555; font-size: 14px; border-top: 1px solid #222; padding-top: 40px; }
-    @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 48px; } }
-    @media (max-width: 768px) { 
-      .section-title { font-size: 32px; }
-      .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 32px; border-bottom: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-      .nav-links.active { display: flex; }
-      .menu-toggle { display: block; background: none; border: none; cursor: pointer; }
-      .menu-toggle span { display: block; width: 28px; height: 3px; background: var(--dark); margin: 6px 0; border-radius: 3px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тур к вулкану без подъема 2 — Экскурсии на Бали</title>
+    <meta name="description" content="На этом туре мы:">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    
+<style>
+    :root {
+        --primary: #00d665;
+        --primary-dark: #00b354;
+        --text-main: #1a1a1a;
+        --text-muted: #666;
+        --bg-light: #f8f9fa;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
     }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text-main); line-height: 1.6; background: var(--white); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header */
+    header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 800; color: var(--text-main); text-decoration: none; }
+    .logo span { color: var(--primary); }
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-whatsapp { background: var(--primary); color: var(--white) !important; padding: 10px 24px; border-radius: 50px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,214,101,0.3); }
+    .btn-whatsapp:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    /* Hero Section */
+    .hero { 
+        position: relative; 
+        height: 600px; 
+        display: flex; 
+        align-items: center; 
+        color: var(--white); 
+        background-size: cover; 
+        background-position: center;
+        margin-bottom: 80px;
+    }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .hero h1 { font-size: 56px; font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+    .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+    .hero-btns { display: flex; gap: 20px; }
+    .btn-primary { background: var(--primary); color: var(--white); padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    .btn-secondary { background: var(--white); color: var(--text-main); padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+    /* Tour Cards */
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 36px; font-weight: 800; margin-bottom: 15px; }
+    .section-title p { color: var(--text-muted); font-size: 18px; }
+    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .tour-card { 
+        background: var(--white); 
+        border-radius: var(--radius); 
+        overflow: hidden; 
+        box-shadow: var(--shadow); 
+        transition: 0.3s; 
+        text-decoration: none; 
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .tour-card:hover { transform: translateY(-10px); }
+    .tour-img { height: 240px; background-size: cover; background-position: center; }
+    .tour-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+    .tour-info h3 { font-size: 22px; font-weight: 700; margin-bottom: 15px; }
+    .tour-info p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+    .tour-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #eee; }
+    .tour-price { font-size: 20px; font-weight: 800; color: var(--text-main); }
+    .tour-link { color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 5px; }
+
+    /* Details Page */
+    .tour-header { padding: 60px 0; background: var(--bg-light); margin-bottom: 60px; }
+    .tour-layout { display: grid; grid-template-columns: 1fr 350px; gap: 50px; }
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 40px 0; }
+    .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow); }
+    .sidebar-card { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); position: sticky; top: 120px; }
+    .sidebar-card h4 { font-size: 24px; margin-bottom: 20px; }
+    .detail-item { display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+    .detail-label { color: var(--text-muted); }
+    .detail-value { font-weight: 600; }
+    .booking-btn { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 18px; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer; margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
+
+    /* Footer */
+    footer { background: #1a1a1a; color: var(--white); padding: 80px 0 40px; margin-top: 100px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px; }
+    .footer-col h4 { margin-bottom: 25px; font-size: 18px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: #aaa; text-decoration: none; transition: 0.3s; }
+    .footer-col ul li a:hover { color: var(--primary); }
+    .footer-bottom { text-align: center; padding-top: 40px; border-top: 1px solid #333; color: #666; font-size: 14px; }
+
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 36px; }
+        .tour-layout { grid-template-columns: 1fr; }
+        .nav-links { display: none; }
+        .gallery { grid-template-columns: 1fr; }
+    }
+</style>
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Bali<span>Trip</span></a>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="tours.html" class="active">Экскурсии</a></li>
-          <li><a href="index.html#how-we-work">Как заказать</a></li>
-          <li><a href="index.html#contact-wa">Заявка на тур</a></li>
-          <li><a href="https://wa.me/6285935490002" class="nav-wa">WhatsApp</a></li>
-        </ul>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+    
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">Bali<span>Trip</span></a>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="tours.html">Экскурсии</a>
+                <a href="index.html#how-to-order">Как заказать</a>
+                <a href="index.html#booking" class="btn-whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.284l-.542 2.317 2.138-.542c.958.61 1.946.974 3.135.974 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.586-5.766-5.767-5.766zm3.39 8.167c-.145.405-.851.733-1.156.778-.256.039-.586.061-.933-.052-.242-.079-.552-.182-.95-.353-1.697-.728-2.792-2.441-2.877-2.553-.084-.114-.693-.92-.693-1.755 0-.835.436-1.245.591-1.413.155-.167.337-.209.45-.209.112 0 .225.001.322.005.101.004.237-.039.371.285.139.337.474 1.156.515 1.24.04.085.067.184.01.299-.057.115-.085.184-.17.284-.085.1-.178.224-.254.3-.085.085-.174.177-.075.347.099.171.441.727.947 1.177.651.577 1.198.756 1.368.841.17.085.27.071.37-.043.1-.114.426-.496.54-.666.114-.17.228-.142.384-.085.156.057.994.469 1.165.554.17.085.284.128.326.198.043.07.043.406-.102.811z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </nav>
     </div>
-  </header>
-  <main>
-    <section class="hero" style="height: 60vh;">
-      <img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" class="hero-img">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Тур к вулкану без подъема 2</h1>
-        <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%202" class="btn btn-primary"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Забронировать в WhatsApp</a>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 380px; gap: 60px;">
-          <div class="content">
-            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px;">Об экскурсии</h2>
-            <p style="white-space: pre-line; margin-bottom: 48px; font-size: 18px; color: #444; line-height: 1.8;">На этом туре мы:
-Посетим парк птиц и рептилий;
-Сплавимся по горной реке Айюнг (рафтинг);
-Увидим Вулкан Батур со смотровой площадки;
-Искупаемся в термальных источниках;
-Прогуляемся по плантациям кофе, какао, ванили и других пряностей.
-Время выезда: 8:30
-Цена тура: 55$
-В стоимость тура входит: машина, бензин, водитель (я сам за рулем)
-В стоимость тура не входит: входные билеты и питание</p>
-            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px;">Галерея</h2>
-            <div class="photo-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 40px;"><img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"><img src="https://i.siteapi.org/lG_EBh77c8iWsKQCDjo6KEHmbWI=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/dtq0z94j5nw4wsog0oso84w448g4ks" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"><img src="https://i.siteapi.org/-eQiQyIY5yCbrMWbDufil5amZtM=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/k8g8zb3f6q8ccss8kk0c8oggkcwkcg" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"><img src="https://i.siteapi.org/cQdFqCAVGf4o6VIzi0_cpvOX2M0=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/ddvvl8foct4c440owo80kwgs4k4w8c" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"><img src="https://i.siteapi.org/hOPupJFyWCZLDwEG7VeMueU7T6I=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/xy3io9jhzz4kocwcgw0s8k8oc04sg4" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"><img src="https://i.siteapi.org/P-3jYl_uHjJPiq3r4VDPkU21IvA=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/p3t0uokawvks4kwkowogw8kc8o8cgc" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 2" loading="lazy"></div>
-          </div>
-          <div class="sidebar" style="background: #fff; padding: 40px; border-radius: 32px; box-shadow: var(--shadow); height: fit-content; position: sticky; top: 120px;">
-            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 24px;">Детали</h3>
-            <div style="margin-bottom: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-              <span style="color: var(--gray);">Стоимость</span><strong style="font-size: 20px;">55$</strong>
-            </div>
-            <div style="margin-bottom: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-              <span style="color: var(--gray);">Выезд</span><strong>8:30</strong>
-            </div>
-            <div style="margin-top: 30px;">
-              <p style="margin-bottom: 15px; font-size: 15px;"><strong>Включено:</strong><br><span style="color: #555;">машина, бензин, водитель (я сам за рулем)</span></p>
-              <p style="font-size: 15px;"><strong>Не включено:</strong><br><span style="color: #555;">входные билеты и питание</span></p>
-            </div>
-            <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%202" class="btn btn-primary" style="width: 100%; margin-top: 40px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать гиду</a>
-          </div>
+</header>
+
+    
+    <section class="tour-header">
+        <div class="container">
+            <a href="tours.html" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-bottom: 20px; display: block;">&larr; Все экскурсии</a>
+            <h1>Тур к вулкану без подъема 2</h1>
         </div>
-      </div>
     </section>
-    </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-contacts">
-        <a href="https://wa.me/6285935490002" class="footer-wa">WhatsApp: +6285935490002</a>
-        <a href="mailto:MADETINGKES@MAIL.RU">Email: MADETINGKES@MAIL.RU</a>
-      </div>
-      <p class="footer-disclaimer">Данный сайт носит информационно-справочный характер и не является публичной офертой.</p>
+
+    <section class="container">
+        <div class="tour-layout">
+            <div class="tour-main">
+                <img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" alt="Тур к вулкану без подъема 2" style="width: 100%; border-radius: 20px; margin-bottom: 40px; box-shadow: var(--shadow);">
+                
+                <div class="content">
+                    <h2 style="margin-bottom: 20px;">Описание экскурсии</h2>
+                    <p style="font-size: 18px; margin-bottom: 30px;">На этом туре мы:</p>
+                    
+                    <h2 style="margin-bottom: 20px;">Галерея</h2>
+                    <div class="gallery">
+                        <img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/lG_EBh77c8iWsKQCDjo6KEHmbWI=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/dtq0z94j5nw4wsog0oso84w448g4ks" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/-eQiQyIY5yCbrMWbDufil5amZtM=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/k8g8zb3f6q8ccss8kk0c8oggkcwkcg" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/cQdFqCAVGf4o6VIzi0_cpvOX2M0=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/ddvvl8foct4c440owo80kwgs4k4w8c" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/hOPupJFyWCZLDwEG7VeMueU7T6I=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/xy3io9jhzz4kocwcgw0s8k8oc04sg4" alt="Тур к вулкану без подъема 2">                        <img src="https://i.siteapi.org/P-3jYl_uHjJPiq3r4VDPkU21IvA=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/p3t0uokawvks4kwkowogw8kc8o8cgc" alt="Тур к вулкану без подъема 2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tour-sidebar">
+                <div class="sidebar-card">
+                    <h4>Детали</h4>
+                    <div class="detail-item">
+                        <span class="detail-label">Стоимость</span>
+                        <span class="detail-value">55$</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Выезд</span>
+                        <span class="detail-value">8:30</span>
+                    </div>
+                    
+                    <div style="margin-top: 25px;">
+                        <h5 style="margin-bottom: 10px;">Включено:</h5>
+                        <p style="font-size: 14px; color: var(--text-muted);">машина, бензин, водитель (я сам за рулем)</p>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <h5 style="margin-bottom: 10px;">Не включено:</h5>
+                        <p style="font-size: 14px; color: var(--text-muted);">входные билеты и питаниее</p>
+                    </div>
+                    
+                    <a href="https://wa.me/6281234567890?text=Здравствуйте!%20Хочу%20забронировать%20тур:%20Тур к вулкану без подъема 2" class="booking-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.284l-.542 2.317 2.138-.542c.958.61 1.946.974 3.135.974 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.586-5.766-5.767-5.766zm3.39 8.167c-.145.405-.851.733-1.156.778-.256.039-.586.061-.933-.052-.242-.079-.552-.182-.95-.353-1.697-.728-2.792-2.441-2.877-2.553-.084-.114-.693-.92-.693-1.755 0-.835.436-1.245.591-1.413.155-.167.337-.209.45-.209.112 0 .225.001.322.005.101.004.237-.039.371.285.139.337.474 1.156.515 1.24.04.085.067.184.01.299-.057.115-.085.184-.17.284-.085.1-.178.224-.254.3-.085.085-.174.177-.075.347.099.171.441.727.947 1.177.651.577 1.198.756 1.368.841.17.085.27.071.37-.043.1-.114.426-.496.54-.666.114-.17.228-.142.384-.085.156.057.994.469 1.165.554.17.085.284.128.326.198.043.07.043.406-.102.811z"/></svg>
+                        Написать гиду
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: block;">Bali<span>Trip</span></a>
+                <p style="color: #aaa;">Ваш надежный гид по самому магическому острову в мире. Индивидуальные туры и незабываемые впечатления.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tours.html">Все экскурсии</a></li>
+                    <li><a href="index.html#how-to-order">Как заказать</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="#">WhatsApp: +62 812-3456-7890</a></li>
+                    <li><a href="#">Email: info@balitrip.ru</a></li>
+                    <li><a href="#">Бали, Индонезия</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 BaliTrip. Все права защищены.
+        </div>
     </div>
-  </footer>
-  <script>
-    document.getElementById('menuToggle')?.addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('active');
-    });
-    </script>
+</footer>
+
 </body>
 </html>
