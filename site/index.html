@@ -41,7 +41,7 @@
     .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
     .btn svg { width: 20px; height: 20px; margin-right: 10px; }
     .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px; }
-    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); }
+    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); position: relative; cursor: pointer; text-decoration: none; color: inherit; }
     .tour-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .tour-card-img { height: 260px; overflow: hidden; position: relative; }
     .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
@@ -53,7 +53,7 @@
     .tour-card-price { font-size: 22px; font-weight: 900; color: var(--dark); }
     .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; }
     .tour-card-link:after { content: '→'; margin-left: 6px; transition: 0.2s; }
-    .tour-card-link:hover:after { transform: translateX(4px); }
+    .tour-card:hover .tour-card-link:after { transform: translateX(4px); }
     .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
     .how-card { background: #fff; padding: 48px 32px; border-radius: 32px; text-align: center; box-shadow: var(--shadow); }
     .how-num { width: 64px; height: 64px; background: var(--primary); color: #fff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 900; transform: rotate(-5deg); }
@@ -120,71 +120,71 @@
         <h2 class="section-title">Популярные направления</h2>
         <p class="section-subtitle">Места, которые обязательно стоит посетить хотя бы раз в жизни</p>
         <div class="tours-grid">
-        <div class="tour-card">
+        <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card">
           <div class="tour-card-img"><img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=1200&q=80" alt="Убут и окрестности деревни"></div>
           <div class="tour-card-body">
             <h3>Убут и окрестности деревни</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">50$</span>
-              <a href="/ubut-i-okrestnosti-derevni.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/priklyuchencheskiy-tur.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/Bsx7ZXviUEcraGIQ_gUBZ5CdcGw=/8e6d329dd9d1493.s2.siteapi.org/page/rfumo2l751c444wcok84os00kcokoo" alt="Приключенческий тур"></div>
           <div class="tour-card-body">
             <h3>Приключенческий тур</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">45$</span>
-              <a href="/priklyuchencheskiy-tur.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" alt="Тур к вулкану без подъема 1"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 1</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">60$</span>
-              <a href="/tur-k-vulkanu-bez-podema-1.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/dGxeHGcGmjnDp-6xGSUTZOZaWVs=/8e6d329dd9d1493.s2.siteapi.org/page/7rrlmmicgc4cc0cko0o8gwcc48404c" alt="Тур к вулкану без подъема 2"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 2</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">55$</span>
-              <a href="/tur-k-vulkanu-bez-podema-2.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/HHkHQhtvYOp7P-B3s9RC33xXbYw=/8e6d329dd9d1493.s2.siteapi.org/page/qm3t1hb995c8g884ogkk84ocso80gg" alt="Тур к вулкану без подъема 3"></div>
           <div class="tour-card-body">
             <h3>Тур к вулкану без подъема 3</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">55$</span>
-              <a href="/tur-k-vulkanu-bez-podema-3.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="tour-card">
+        <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card">
           <div class="tour-card-img"><img src="https://i.siteapi.org/yRN1oEVm6qPoRaa-DjVoFLOpY5M=/8e6d329dd9d1493.s2.siteapi.org/page/awiq9ec10cw840ws404sgkggcccscs" alt="Тур на северо-запад острова 1"></div>
           <div class="tour-card-body">
             <h3>Тур на северо-запад острова 1</h3>
             <div class="tour-card-footer">
               <span class="tour-card-price">60$</span>
-              <a href="/tur-na-severo-zapad-ostrova-1.html" class="tour-card-link">Подробнее</a>
+              <span class="tour-card-link">Подробнее</span>
             </div>
           </div>
-        </div>
+        </a>
         </div>
         <div style="text-align: center; margin-top: 60px;">
           <a href="/tours.html" class="btn btn-white" style="border: 2px solid #eee;">Смотреть все 14 туров</a>

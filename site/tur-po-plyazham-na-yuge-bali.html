@@ -41,7 +41,7 @@
     .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
     .btn svg { width: 20px; height: 20px; margin-right: 10px; }
     .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px; }
-    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); }
+    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); position: relative; cursor: pointer; text-decoration: none; color: inherit; }
     .tour-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .tour-card-img { height: 260px; overflow: hidden; position: relative; }
     .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
@@ -53,7 +53,7 @@
     .tour-card-price { font-size: 22px; font-weight: 900; color: var(--dark); }
     .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; }
     .tour-card-link:after { content: '→'; margin-left: 6px; transition: 0.2s; }
-    .tour-card-link:hover:after { transform: translateX(4px); }
+    .tour-card:hover .tour-card-link:after { transform: translateX(4px); }
     .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
     .how-card { background: #fff; padding: 48px 32px; border-radius: 32px; text-align: center; box-shadow: var(--shadow); }
     .how-num { width: 64px; height: 64px; background: var(--primary); color: #fff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 900; transform: rotate(-5deg); }
