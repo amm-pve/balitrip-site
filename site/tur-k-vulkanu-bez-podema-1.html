@@ -5,69 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Тур к вулкану без подъема 1 - BaliTrip</title>
   <meta name="description" content="Забронируйте тур Тур к вулкану без подъема 1 на Бали с русскоговорящим гидом.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root { --primary: #25d366; --dark: #1a1a1a; --light: #f5f6f8; --white: #ffffff; --gray: #666666; --border: #e1e4e8; --shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    :root { --primary: #25d366; --primary-dark: #128c7e; --dark: #1a1a1a; --light: #f8f9fa; --white: #ffffff; --gray: #6c757d; --border: #eee; --shadow: 0 10px 30px rgba(0,0,0,0.05); }
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
-    .section-title { font-size: 36px; margin-bottom: 16px; font-weight: 700; text-align: center; }
-    .section-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 48px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .site-header { background: var(--white); height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section-title { font-size: 42px; margin-bottom: 16px; font-weight: 800; text-align: center; letter-spacing: -1px; }
+    .section-subtitle { font-size: 18px; color: var(--gray); margin-bottom: 60px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
+    
+    .site-header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
     .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--dark); }
+    .logo { font-size: 26px; font-weight: 900; text-decoration: none; color: var(--dark); letter-spacing: -1px; }
     .logo span { color: var(--primary); }
     .nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 15px; }
-    .nav-links a.active { color: var(--primary); }
-    .nav-wa { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 50px; }
-    .hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: center; overflow: hidden; background: #000; color: #fff; }
-    .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
-    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); }
-    .hero-content { position: relative; z-index: 10; max-width: 800px; }
-    .hero h1 { font-size: 56px; margin-bottom: 20px; line-height: 1.1; }
-    .btn-wa { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: #fff; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 700; font-size: 16px; transition: 0.3s; }
-    .btn-wa:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
-    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-    .tour-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; }
-    .tour-card:hover { transform: translateY(-10px); }
-    .tour-card-img { height: 240px; position: relative; background: #eee; }
-    .tour-card-img img { width: 100%; height: 100%; object-fit: cover; }
-    .tour-card-body { padding: 25px; flex-grow: 1; }
-    .tour-card h3 { margin-bottom: 12px; font-size: 22px; }
-    .tour-card p { color: var(--gray); font-size: 15px; margin-bottom: 20px; }
-    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0; }
-    .tour-card-footer strong { font-size: 20px; color: var(--dark); }
-    .details-grid { display: grid; grid-template-columns: 1fr 380px; gap: 50px; }
-    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-    .gallery-img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; cursor: pointer; transition: 0.3s; }
-    .gallery-img:hover { opacity: 0.9; transform: scale(1.02); }
-    .sidebar { background: #fff; padding: 30px; border-radius: 20px; box-shadow: var(--shadow); height: fit-content; position: sticky; top: 110px; }
-    .sidebar h3 { margin-bottom: 20px; font-size: 24px; }
-    .sidebar-item { margin-bottom: 18px; display: flex; justify-content: space-between; border-bottom: 1px solid #f0f0f0; padding-bottom: 12px; }
-    .sidebar-item span { color: var(--gray); }
-    .sidebar-item strong { color: var(--dark); }
-    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px; }
-    .how-item { text-align: center; }
-    .how-icon { width: 80px; height: 80px; background: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px; font-weight: 800; }
-    .contact-form { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 20px; box-shadow: var(--shadow); }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-    .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 10px; font-family: inherit; font-size: 16px; }
-    .form-group textarea { height: 120px; resize: vertical; }
-    .btn-submit { width: 100%; background: var(--dark); color: #fff; border: none; padding: 15px; border-radius: 10px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s; }
-    .btn-submit:hover { background: #333; }
-    .site-footer { background: var(--dark); color: #fff; padding: 60px 0; text-align: center; margin-top: 80px; }
-    .footer-contacts { margin-bottom: 30px; }
-    .footer-contacts a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: 500; }
-    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
-    .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--dark); margin: 5px 0; transition: 0.3s; }
-    @media (max-width: 992px) { .details-grid { grid-template-columns: 1fr; } .sidebar { position: static; } .how-grid { grid-template-columns: 1fr; gap: 30px; } }
+    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; transition: 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .nav-wa { background: var(--primary); color: var(--white) !important; padding: 12px 24px; border-radius: 12px; transition: 0.3s; }
+    .nav-wa:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    .hero { position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; background: #000; color: #fff; overflow: hidden; }
+    .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transform: scale(1.05); transition: 10s linear; }
+    .hero:hover .hero-img { transform: scale(1); }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%); }
+    .hero-content { position: relative; z-index: 10; max-width: 700px; }
+    .hero h1 { font-size: 64px; font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -2px; }
+    .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; font-weight: 400; }
+    
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; border-radius: 14px; font-weight: 700; font-size: 16px; text-decoration: none; transition: 0.3s; cursor: pointer; border: none; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
+    .btn-white { background: #fff; color: var(--dark); }
+    .btn-white:hover { background: #f0f0f0; transform: translateY(-3px); }
+    .btn svg { width: 20px; height: 20px; margin-right: 10px; }
+
+    .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px; }
+    .tour-card { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.03); }
+    .tour-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .tour-card-img { height: 260px; overflow: hidden; position: relative; }
+    .tour-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+    .tour-card:hover .tour-card-img img { transform: scale(1.1); }
+    .tour-card-body { padding: 32px; flex-grow: 1; }
+    .tour-card h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .tour-card p { color: var(--gray); font-size: 15px; margin-bottom: 24px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .tour-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #f5f5f5; }
+    .tour-card-price { font-size: 22px; font-weight: 900; color: var(--dark); }
+    .tour-card-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; }
+    .tour-card-link:after { content: '→'; margin-left: 6px; transition: 0.2s; }
+    .tour-card-link:hover:after { transform: translateX(4px); }
+
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .how-card { background: #fff; padding: 48px 32px; border-radius: 32px; text-align: center; box-shadow: var(--shadow); }
+    .how-num { width: 64px; height: 64px; background: var(--primary); color: #fff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 900; transform: rotate(-5deg); }
+    .how-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+
+    .contact-section { background: var(--dark); color: #fff; border-radius: 48px; padding: 80px 40px; margin-bottom: 100px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .contact-form { background: #fff; padding: 48px; border-radius: 32px; color: var(--dark); }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); }
+    .form-group input, .form-group textarea { width: 100%; padding: 16px; border: 2px solid #f0f0f0; border-radius: 16px; font-family: inherit; font-size: 16px; transition: 0.3s; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; background: #fff; }
+    .btn-submit { width: 100%; background: var(--primary); color: #fff; border: none; padding: 20px; border-radius: 16px; font-weight: 800; font-size: 18px; cursor: pointer; transition: 0.3s; }
+    .btn-submit:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+    .site-footer { background: #000; color: #fff; padding: 80px 0 40px; text-align: center; }
+    .footer-logo { font-size: 32px; font-weight: 900; margin-bottom: 40px; display: block; text-decoration: none; color: #fff; }
+    .footer-logo span { color: var(--primary); }
+    .footer-links { margin-bottom: 40px; display: flex; justify-content: center; gap: 40px; }
+    .footer-links a { color: #aaa; text-decoration: none; font-weight: 600; transition: 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { color: #555; font-size: 14px; border-top: 1px solid #222; padding-top: 40px; }
+
+    @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 48px; } }
     @media (max-width: 768px) { 
-      .hero h1 { font-size: 36px; } 
-      .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 20px; border-bottom: 1px solid var(--border); }
+      .section-title { font-size: 32px; }
+      .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 32px; border-bottom: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
       .nav-links.active { display: flex; }
-      .menu-toggle { display: block; }
+      .menu-toggle { display: block; background: none; border: none; cursor: pointer; }
+      .menu-toggle span { display: block; width: 28px; height: 3px; background: var(--dark); margin: 6px 0; border-radius: 3px; }
     }
     </style>
 </head>
@@ -90,20 +110,20 @@
     </div>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" style="height: 60vh;">
       <img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" class="hero-img">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <h1>Тур к вулкану без подъема 1</h1>
-        <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%201" class="btn-wa"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Забронировать в WhatsApp</a>
+        <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%201" class="btn btn-primary"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Забронировать в WhatsApp</a>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <div class="details-grid">
+        <div style="display: grid; grid-template-columns: 1fr 380px; gap: 60px;">
           <div class="content">
-            <h2 style="margin-bottom: 20px;">Описание экскурсии</h2>
-            <p style="white-space: pre-line; margin-bottom: 40px; font-size: 17px; color: #444;">Этот тур мы начнём с посещения деревни Батубулан, где мы увидим балийский национальный танец (Barong dance) - самое интересное представление на Бали.
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px;">Об экскурсии</h2>
+            <p style="white-space: pre-line; margin-bottom: 48px; font-size: 18px; color: #444; line-height: 1.8;">Этот тур мы начнём с посещения деревни Батубулан, где мы увидим балийский национальный танец (Barong dance) - самое интересное представление на Бали.
 После мы направимся в место с тысячелетней историей - храм пещеры слонов (Goa gajah).
 В храме священного источника (Pura Tirta Empul) вы сможете очистить негативную ауру ритуальным омовением.
 Потом мы увидим плантации и даже попробуем кофе, какао, имбирь, ананасы и экзотический  дуриан.
@@ -113,19 +133,22 @@
 Цена тура: 60$
 В стоимость тура входит: машина, бензин, водитель (я сам за рулем)
 В стоимость тура не входит: входные билеты и питание</p>
-            <h2 style="margin-bottom: 20px;">Галерея тура</h2>
-            <div class="photo-gallery"><img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/XgayUBUKKzEQegNrHDA9rMsNQuU=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/m2cu7a8bz7k0sw8wkkgows44kc8o80" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/9qO3XkwcLWInE6PA3I3cFYQyJqw=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/h8umx6kr948okoookk0c4goc0w0goc" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/xai8QambC3W2ARoLk-Bp_LaUXPM=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/e4l8ptf932g4sog0scgkws4sw08sgw" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/WnogKhAums3OxdLiDR8YoguMIz8=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/88qowv9bnlogskcgwo0g44csscgw80" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/aV-Pj9PS65pSfzYRaJZ5wqay5H0=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/a829zy7qhu040o0c484k4kg440gwc8" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/I6YhIs1_Mdnpg5wZmz5Ms7yxRHw=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/hizzv3fle680k4cs4wk0o08swwowco" class="gallery-img" alt="Тур к вулкану без подъема 1" loading="lazy"></div>
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px;">Галерея</h2>
+            <div class="photo-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 40px;"><img src="https://i.siteapi.org/E0qNB8q9GZ_CUsvyEFx26Zlq7Tw=/8e6d329dd9d1493.s2.siteapi.org/page/4u28lfxgi84kcs8cs0s8g4cs0gcw0g" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/V0gMq2Evvu1YZsuUqpFDSnh-TGY=/8e6d329dd9d1493.s2.siteapi.org/page/iyq6kldh3d44ok40c8o04og00kc0o4" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/XgayUBUKKzEQegNrHDA9rMsNQuU=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/m2cu7a8bz7k0sw8wkkgows44kc8o80" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/9qO3XkwcLWInE6PA3I3cFYQyJqw=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/h8umx6kr948okoookk0c4goc0w0goc" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/xai8QambC3W2ARoLk-Bp_LaUXPM=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/e4l8ptf932g4sog0scgkws4sw08sgw" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/WnogKhAums3OxdLiDR8YoguMIz8=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/88qowv9bnlogskcgwo0g44csscgw80" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/aV-Pj9PS65pSfzYRaJZ5wqay5H0=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/a829zy7qhu040o0c484k4kg440gwc8" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"><img src="https://i.siteapi.org/I6YhIs1_Mdnpg5wZmz5Ms7yxRHw=/fit-in/800x800/filters:fill(transparent):format(png)/8e6d329dd9d1493.s2.siteapi.org/page/hizzv3fle680k4cs4wk0o08swwowco" style="width: 100%; height: 240px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);" alt="Тур к вулкану без подъема 1" loading="lazy"></div>
           </div>
-          <div class="sidebar">
-            <h3>Детали тура</h3>
-            <div class="sidebar-item"><span>Стоимость</span><strong>60$</strong></div>
-            <div class="sidebar-item"><span>Время выезда</span><strong>8:00</strong></div>
-            <div class="sidebar-item"><span>Гид</span><strong>Русскоговорящий</strong></div>
-            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-              <p style="margin-bottom: 10px;"><strong>Включено:</strong><br>машина, бензин, водитель (я сам за рулем)</p>
-              <p><strong>Не включено:</strong><br>входные билеты и питание</p>
+          <div class="sidebar" style="background: #fff; padding: 40px; border-radius: 32px; box-shadow: var(--shadow); height: fit-content; position: sticky; top: 120px;">
+            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 24px;">Детали</h3>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+              <span style="color: var(--gray);">Стоимость</span><strong style="font-size: 20px;">60$</strong>
             </div>
-            <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%201" class="btn-wa" style="width: 100%; justify-content: center; margin-top: 30px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать гиду</a>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+              <span style="color: var(--gray);">Выезд</span><strong>8:00</strong>
+            </div>
+            <div style="margin-top: 30px;">
+              <p style="margin-bottom: 15px; font-size: 15px;"><strong>Включено:</strong><br><span style="color: #555;">машина, бензин, водитель (я сам за рулем)</span></p>
+              <p style="font-size: 15px;"><strong>Не включено:</strong><br><span style="color: #555;">входные билеты и питание</span></p>
+            </div>
+            <a href="https://wa.me/6285935490002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%82%D1%83%D1%80%3A%20%D0%A2%D1%83%D1%80%20%D0%BA%20%D0%B2%D1%83%D0%BB%D0%BA%D0%B0%D0%BD%D1%83%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%D0%B0%201" class="btn btn-primary" style="width: 100%; margin-top: 40px;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Написать гиду</a>
           </div>
         </div>
       </div>
